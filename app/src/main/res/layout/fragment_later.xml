@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/taskslayoutBG"
+    tools:context=".fragment.LaterFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/taskslayoutBG"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/taskslayoutBG"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/calendarBG"
+                android:backgroundTint="@color/calendarBG"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_calendar_page_empty"
+                        android:padding="5dp"
+                        android:layout_margin="5dp"
+                        />
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center|bottom"
+                        android:gravity="center"
+                        android:text="10"
+                        android:textSize="35sp"
+                        android:textColor="@color/white"
+                        android:layout_margin="15dp"
+                        android:paddingBottom="10dp"
+                        />
+
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rise_and_shine"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="25sp"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/activity_main_calendartext"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15sp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginRight="35dp"
+                    android:layout_marginBottom="35dp"
+                    android:padding="5dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/taskslayoutBG"
+                android:padding="15dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text = "@string/pending_items"
+                    android:textColor="@color/black"
+                    android:textAllCaps="true"
+                    android:padding="5dp"
+                    android:layout_marginLeft="20dp"
+                    />
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/today_fragment_pending_task_listView"
+                    android:padding="5dp"
+                    android:visibility="visible"
+                    android:layout_marginLeft="20dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/taskslayoutBG"
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp"
+                android:paddingBottom="15dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text = "@string/completed_items"
+                    android:textColor="@color/black"
+                    android:textAllCaps="true"
+                    android:padding="5dp"
+                    android:layout_marginLeft="20dp"
+                    />
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/today_fragment_completed_task_listView"
+                    android:padding="5dp"
+                    android:visibility="visible"
+                    android:layout_marginLeft="20dp"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>
